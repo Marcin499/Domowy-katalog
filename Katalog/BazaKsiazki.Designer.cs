@@ -117,9 +117,9 @@
             this.label1.Font = new System.Drawing.Font("French Script MT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(319, 42);
+            this.label1.Size = new System.Drawing.Size(422, 42);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Domowy katalog - Menu";
+            this.label1.Text = "Domowy katalog - Baza Ksiazek";
             // 
             // button1
             // 
@@ -728,9 +728,9 @@
             this.label18.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label18.Location = new System.Drawing.Point(172, 554);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(97, 23);
+            this.label18.Size = new System.Drawing.Size(103, 23);
             this.label18.TabIndex = 70;
-            this.label18.Text = "Sortuj wg.";
+            this.label18.Text = "Sortuj wg.:";
             // 
             // BazaKsiazki
             // 
@@ -799,7 +799,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BazaKsiazki";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BazaKsiazki";
+            this.Text = "Baza Ksiazki";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

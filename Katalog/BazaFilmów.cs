@@ -12,53 +12,43 @@ using System.Data.SqlClient;
 
 namespace Katalog
 {
-    public partial class BazaKsiazki : Form
+    public partial class BazaFilmów : Form
     {
-
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-BPE4OM3;Initial Catalog=BazaKsiążki;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-        
-        public BazaKsiazki()
+
+        public BazaFilmów()
         {
             InitializeComponent();
-            con.Open();
+            con.Close(); con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from BazaKsiazki";
+            cmd.CommandText = "Select * from BazaFilmów";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
             sa.Fill(dt);
             dataGridView1.DataSource = dt;
-            con.Close();
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void BazaFilmów_Load(object sender, EventArgs e)
         {
-            OknoDodaj od = new OknoDodaj();
-            od.Show();
+
+        }
+        
+
+        private void button16_Click_1(object sender, EventArgs e)
+        {
+            OknoDodajFilmy odf = new OknoDodajFilmy();
+            odf.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-                textBox1.Text = row.Cells[0].Value.ToString();
-                textBox2.Text = row.Cells[1].Value.ToString();
-                textBox3.Text = row.Cells[2].Value.ToString();
-                textBox4.Text = row.Cells[3].Value.ToString();
-                textBox5.Text = row.Cells[4].Value.ToString();
-                textBox6.Text = row.Cells[5].Value.ToString();
-                textBox7.Text = row.Cells[6].Value.ToString();
-            }
-        }
-
-        private void button17_Click(object sender, EventArgs e)
+        }                     
+                        
+                  
+        private void button17_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Czy napewno chcesz usunąć dane?", "Uwaga", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
             {
@@ -76,7 +66,7 @@ namespace Katalog
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Delete from BazaKsiazki Where ID = '" + textBox1.Text + "'";
+                cmd.CommandText = "Delete from BazaFilmów Where ID = '" + textBox1.Text + "'";
                 cmd.ExecuteNonQuery();
                 con.Close();
                 textBox1.Clear();
@@ -90,12 +80,13 @@ namespace Katalog
             }
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void button18_Click_1(object sender, EventArgs e)
         {
+            con.Close();
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from BazaKsiazki";
+            cmd.CommandText = "Select * from BazaFilmów";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -103,19 +94,35 @@ namespace Katalog
             dataGridView1.DataSource = dt;
         }
 
-        private void button19_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                textBox1.Text = row.Cells[0].Value.ToString();
+                textBox2.Text = row.Cells[1].Value.ToString();
+                textBox3.Text = row.Cells[2].Value.ToString();
+                textBox4.Text = row.Cells[3].Value.ToString();
+                textBox5.Text = row.Cells[4].Value.ToString();
+                textBox6.Text = row.Cells[5].Value.ToString();
+                textBox7.Text = row.Cells[6].Value.ToString();
+            }
+        }
+
+        private void button19_Click_1(object sender, EventArgs e)
+        {
+
             //Otwieranie wyszukiwarki Google
             Process.Start("https://www.google.com/search?q=" + textBox2.Text);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             con.Close();
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from BazaKsiazki Where ID = '" + textBox1.Text + "'";
+            cmd.CommandText = "Select * from BazaFilmów Where ID = '" + textBox1.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -124,13 +131,13 @@ namespace Katalog
             con.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
             con.Close();
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from BazaKsiazki Where Tytuł = '" + textBox2.Text + "'";
+            cmd.CommandText = "Select * from BazaFilmów Where Tytuł = '" + textBox2.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -139,13 +146,13 @@ namespace Katalog
             con.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
             con.Close();
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from BazaKsiazki Where Autor = '" + textBox3.Text + "'";
+            cmd.CommandText = "Select * from BazaFilmów Where Reżyseria = '" + textBox3.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -155,13 +162,13 @@ namespace Katalog
             textBox3.Clear();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click_1(object sender, EventArgs e)
         {
             con.Close();
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from BazaKsiazki Where Wydawnictwo = '" + textBox4.Text + "'";
+            cmd.CommandText = "Select * from BazaFilmów Where Wytwórnia = '" + textBox4.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -171,13 +178,13 @@ namespace Katalog
             textBox4.Clear();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button6_Click_1(object sender, EventArgs e)
         {
             con.Close();
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from BazaKsiazki Where Data_Wydania = '" + textBox5.Text + "'";
+            cmd.CommandText = "Select * from BazaFilmów Where Data_premiery = '" + textBox5.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -187,13 +194,13 @@ namespace Katalog
             textBox5.Clear();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button7_Click_1(object sender, EventArgs e)
         {
             con.Close();
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from BazaKsiazki Where Gatunek = '" + textBox6.Text + "'";
+            cmd.CommandText = "Select * from BazaFilmów Where Gatunek = '" + textBox6.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -203,13 +210,13 @@ namespace Katalog
             textBox6.Clear();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void button8_Click_1(object sender, EventArgs e)
         {
             con.Close();
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from BazaKsiazki Where Słowa_Klucze = '" + textBox7.Text + "'";
+            cmd.CommandText = "Select * from  BazaFilmów Where Czas_trwarnia = '" + textBox7.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -219,16 +226,16 @@ namespace Katalog
             textBox7.Clear();
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void button15_Click_1(object sender, EventArgs e)
         {
             try
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Update BazaKsiazki set ID = @ID Where ID ='" + textBox1.Text + "'";
+                cmd.CommandText = "Update  BazaFilmów set ID = @ID Where ID ='" + textBox1.Text + "'";
                 cmd.Parameters.AddWithValue("@ID", textBox14.Text);
-                cmd.ExecuteNonQuery();               
+                cmd.ExecuteNonQuery();
                 MessageBox.Show("Zaktualizowano dane.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox14.Clear();
                 textBox1.Clear();
@@ -246,16 +253,16 @@ namespace Katalog
             con.Close();
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void button14_Click_1(object sender, EventArgs e)
         {
             try
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Update BazaKsiazki set Tytuł = @Tytuł Where ID ='" + textBox1.Text + "'";
+                cmd.CommandText = "Update  BazaFilmów set Tytuł = @Tytuł Where ID ='" + textBox1.Text + "'";
                 cmd.Parameters.AddWithValue("@Tytuł", textBox13.Text);
-                cmd.ExecuteNonQuery();                
+                cmd.ExecuteNonQuery();
                 MessageBox.Show("Zaktualizowano dane.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox13.Clear();
                 textBox1.Clear();
@@ -273,16 +280,16 @@ namespace Katalog
             con.Close();
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void button13_Click_1(object sender, EventArgs e)
         {
             try
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Update BazaKsiazki set Autor = @Autor Where ID ='" + textBox1.Text + "'";
-                cmd.Parameters.AddWithValue("@Autor", textBox12.Text);
-                cmd.ExecuteNonQuery();               
+                cmd.CommandText = "Update BazaFilmów set Reżyseria = @Reżyseria Where ID ='" + textBox1.Text + "'";
+                cmd.Parameters.AddWithValue("@Reżyseria", textBox12.Text);
+                cmd.ExecuteNonQuery();
                 MessageBox.Show("Zaktualizowano dane.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox12.Clear();
                 textBox1.Clear();
@@ -300,16 +307,16 @@ namespace Katalog
             con.Close();
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void button12_Click_1(object sender, EventArgs e)
         {
             try
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Update BazaKsiazki set Wydawnictwo = @Wydawnictwo Where ID ='" + textBox1.Text + "'";
-                cmd.Parameters.AddWithValue("@Wydawnictwo", textBox11.Text);
-                cmd.ExecuteNonQuery();                
+                cmd.CommandText = "Update  BazaFilmów set Wytwórnia = @Wytwórnia Where ID ='" + textBox1.Text + "'";
+                cmd.Parameters.AddWithValue("@Wytwórnia", textBox11.Text);
+                cmd.ExecuteNonQuery();
                 MessageBox.Show("Zaktualizowano dane.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox11.Clear();
                 textBox1.Clear();
@@ -327,16 +334,16 @@ namespace Katalog
             con.Close();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void button11_Click_1(object sender, EventArgs e)
         {
             try
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Update BazaKsiazki set Data_Wydania = @Data_Wydania Where ID ='" + textBox1.Text + "'";
-                cmd.Parameters.AddWithValue("@Data_Wydania", textBox10.Text);
-                cmd.ExecuteNonQuery();                
+                cmd.CommandText = "Update  BazaFilmów set Data_premiery = @Data_premiery Where ID ='" + textBox1.Text + "'";
+                cmd.Parameters.AddWithValue("@Data_premiery", textBox10.Text);
+                cmd.ExecuteNonQuery();
                 MessageBox.Show("Zaktualizowano dane.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox10.Clear();
                 textBox1.Clear();
@@ -354,16 +361,16 @@ namespace Katalog
             con.Close();
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void button10_Click_1(object sender, EventArgs e)
         {
             try
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Update BazaKsiazki set Gatunek = @Gatunek Where ID ='" + textBox1.Text + "'";
+                cmd.CommandText = "Update  BazaFilmów set Gatunek = @Gatunek Where ID ='" + textBox1.Text + "'";
                 cmd.Parameters.AddWithValue("@Gatunek", textBox9.Text);
-                cmd.ExecuteNonQuery();               
+                cmd.ExecuteNonQuery();
                 MessageBox.Show("Zaktualizowano dane.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox9.Clear();
                 textBox1.Clear();
@@ -381,16 +388,16 @@ namespace Katalog
             con.Close();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void button9_Click_1(object sender, EventArgs e)
         {
             try
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Update BazaKsiazki set Słowa_Klucze = @Słowa_Klucze Where ID ='" + textBox1.Text + "'";
-                cmd.Parameters.AddWithValue("@Słowa_Klucze", textBox8.Text);
-                cmd.ExecuteNonQuery();                
+                cmd.CommandText = "Update  BazaFilmów set Czas_trwania = @Czas_trwania Where ID ='" + textBox1.Text + "'";
+                cmd.Parameters.AddWithValue("@Czas_trwania", textBox8.Text);
+                cmd.ExecuteNonQuery();
                 MessageBox.Show("Zaktualizowano dane.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox8.Clear();
                 textBox1.Clear();
@@ -408,7 +415,7 @@ namespace Katalog
             con.Close();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
             con.Close();
             if (checkBox1.CheckState == CheckState.Checked)
@@ -416,7 +423,7 @@ namespace Katalog
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from BazaKsiazki Order by Tytuł";
+                cmd.CommandText = "Select * from  BazaFilmów Order by Tytuł";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -430,7 +437,7 @@ namespace Katalog
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from BazaKsiazki";
+                cmd.CommandText = "Select * from  BazaFilmów";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -440,7 +447,7 @@ namespace Katalog
             }
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
         {
             con.Close();
             if (checkBox2.CheckState == CheckState.Checked)
@@ -448,7 +455,7 @@ namespace Katalog
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from BazaKsiazki Order by Autor";
+                cmd.CommandText = "Select * from  BazaFilmów Order by Reżyseria";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -462,7 +469,7 @@ namespace Katalog
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from BazaKsiazki";
+                cmd.CommandText = "Select * from  BazaFilmów";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -472,7 +479,7 @@ namespace Katalog
             }
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
         {
             con.Close();
             if (checkBox3.CheckState == CheckState.Checked)
@@ -480,7 +487,7 @@ namespace Katalog
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from BazaKsiazki Order by Wydawnictwo";
+                cmd.CommandText = "Select * from  BazaFilmów Order by Wytwórnia";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -494,7 +501,7 @@ namespace Katalog
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from BazaKsiazki";
+                cmd.CommandText = "Select * from  BazaFilmów";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -504,7 +511,7 @@ namespace Katalog
             }
         }
 
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        private void checkBox4_CheckedChanged_1(object sender, EventArgs e)
         {
             con.Close();
             if (checkBox4.CheckState == CheckState.Checked)
@@ -512,7 +519,7 @@ namespace Katalog
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from BazaKsiazki Order by Data_Wydania";
+                cmd.CommandText = "Select * from  BazaFilmów Order by Data_premiery";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -526,7 +533,7 @@ namespace Katalog
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from BazaKsiazki";
+                cmd.CommandText = "Select * from  BazaFilmów";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -536,7 +543,7 @@ namespace Katalog
             }
         }
 
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        private void checkBox5_CheckedChanged_1(object sender, EventArgs e)
         {
             con.Close();
             if (checkBox5.CheckState == CheckState.Checked)
@@ -544,7 +551,7 @@ namespace Katalog
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from BazaKsiazki Order by Gatunek";
+                cmd.CommandText = "Select * from  BazaFilmów Order by Gatunek";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -558,7 +565,7 @@ namespace Katalog
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from BazaKsiazki";
+                cmd.CommandText = "Select * from  BazaFilmów";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -568,7 +575,7 @@ namespace Katalog
             }
         }
 
-        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        private void checkBox6_CheckedChanged_1(object sender, EventArgs e)
         {
             con.Close();
             if (checkBox6.CheckState == CheckState.Checked)
@@ -576,7 +583,7 @@ namespace Katalog
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from BazaKsiazki Order by Słowa_Klucze";
+                cmd.CommandText = "Select * from  BazaFilmów Order by Czas_trwania";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -590,7 +597,7 @@ namespace Katalog
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from BazaKsiazki";
+                cmd.CommandText = "Select * from  BazaFilmów";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
@@ -600,4 +607,9 @@ namespace Katalog
             }
         }
     }
+
 }
+
+
+    
+

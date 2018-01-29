@@ -145,5 +145,11 @@ namespace Katalog
         {
             Process.Start("http://www.empik.com/nowosci/muzyka");
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            BazaFilmów bf = new BazaFilmów();
+            bf.Show();
+        }
     }
 }

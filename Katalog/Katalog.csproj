@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BazaFilmów.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BazaFilmów.Designer.cs">
+      <DependentUpon>BazaFilmów.cs</DependentUpon>
+    </Compile>
     <Compile Include="BazaKsiazki.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,8 +80,17 @@
     <Compile Include="OknoDodaj.Designer.cs">
       <DependentUpon>OknoDodaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="OknoDodajFilmy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OknoDodajFilmy.Designer.cs">
+      <DependentUpon>OknoDodajFilmy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BazaFilmów.resx">
+      <DependentUpon>BazaFilmów.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BazaKsiazki.resx">
       <DependentUpon>BazaKsiazki.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OknoDodaj.resx">
       <DependentUpon>OknoDodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OknoDodajFilmy.resx">
+      <DependentUpon>OknoDodajFilmy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
