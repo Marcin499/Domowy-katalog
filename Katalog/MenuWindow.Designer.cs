@@ -253,6 +253,7 @@
             this.button7.Text = "Baza płyt";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Visible = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 

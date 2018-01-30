@@ -52,7 +52,7 @@ namespace Katalog
         {
             if (MessageBox.Show("Czy napewno chcesz usunąć dane?", "Uwaga", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
             {
-                MessageBox.Show("Operacje anulowano");
+                MessageBox.Show("Anulowano operacje");
                 textBox1.Clear();
                 textBox2.Clear();
                 textBox3.Clear();

@@ -151,5 +151,11 @@ namespace Katalog
             BazaFilmów bf = new BazaFilmów();
             bf.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            BazaMuzyka bm = new BazaMuzyka();
+            bm.Show();
+        }
     }
 }
