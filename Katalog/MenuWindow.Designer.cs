@@ -268,6 +268,7 @@
             this.button8.Text = "Wypożyczalnia";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Visible = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -282,6 +283,7 @@
             this.button9.Text = "Wypozyczalnia";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Visible = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -296,6 +298,7 @@
             this.button10.Text = "Wypozyczalnia";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Visible = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 

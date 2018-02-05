@@ -19,7 +19,7 @@ namespace Katalog
         public BazaFilmów()
         {
             InitializeComponent();
-            con.Close(); con.Open();
+            con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "Select * from BazaFilmów";
@@ -63,6 +63,7 @@ namespace Katalog
             }
             else
             {
+                con.Close();
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;

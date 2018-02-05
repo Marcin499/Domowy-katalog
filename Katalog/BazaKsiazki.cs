@@ -73,6 +73,7 @@ namespace Katalog
             }
             else
             {
+                con.Close();
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -92,6 +93,7 @@ namespace Katalog
 
         private void button18_Click(object sender, EventArgs e)
         {
+            con.Close();
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;

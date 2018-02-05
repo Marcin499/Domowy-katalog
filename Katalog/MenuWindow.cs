@@ -157,5 +157,23 @@ namespace Katalog
             BazaMuzyka bm = new BazaMuzyka();
             bm.Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            KsiazkiWypozyczenie kw = new KsiazkiWypozyczenie();
+            kw.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            FilmyWypozyczenie fw = new FilmyWypozyczenie();
+            fw.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            MuzykiWypozyczenie mw = new MuzykiWypozyczenie();
+            mw.Show();
+        }
     }
 }
