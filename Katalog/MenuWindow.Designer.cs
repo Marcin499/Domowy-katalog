@@ -51,20 +51,15 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -166,7 +161,7 @@
             this.button2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button2.ForeColor = System.Drawing.Color.DarkRed;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(145, 202);
+            this.button2.Location = new System.Drawing.Point(276, 175);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 87);
             this.button2.TabIndex = 3;
@@ -184,7 +179,7 @@
             this.button3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button3.ForeColor = System.Drawing.Color.DarkRed;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(352, 202);
+            this.button3.Location = new System.Drawing.Point(483, 175);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 87);
             this.button3.TabIndex = 4;
@@ -201,7 +196,7 @@
             this.button4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button4.ForeColor = System.Drawing.Color.DarkRed;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(552, 202);
+            this.button4.Location = new System.Drawing.Point(683, 175);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(133, 87);
             this.button4.TabIndex = 5;
@@ -216,7 +211,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button5.ForeColor = System.Drawing.Color.DarkRed;
-            this.button5.Location = new System.Drawing.Point(147, 310);
+            this.button5.Location = new System.Drawing.Point(278, 283);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(118, 31);
             this.button5.TabIndex = 6;
@@ -231,7 +226,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button6.ForeColor = System.Drawing.Color.DarkRed;
-            this.button6.Location = new System.Drawing.Point(353, 310);
+            this.button6.Location = new System.Drawing.Point(484, 283);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(118, 31);
             this.button6.TabIndex = 7;
@@ -246,7 +241,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button7.ForeColor = System.Drawing.Color.DarkRed;
-            this.button7.Location = new System.Drawing.Point(554, 310);
+            this.button7.Location = new System.Drawing.Point(685, 283);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(118, 31);
             this.button7.TabIndex = 8;
@@ -261,7 +256,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button8.ForeColor = System.Drawing.Color.DarkRed;
-            this.button8.Location = new System.Drawing.Point(147, 359);
+            this.button8.Location = new System.Drawing.Point(278, 332);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(118, 31);
             this.button8.TabIndex = 9;
@@ -276,7 +271,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button9.ForeColor = System.Drawing.Color.DarkRed;
-            this.button9.Location = new System.Drawing.Point(354, 359);
+            this.button9.Location = new System.Drawing.Point(485, 332);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(118, 31);
             this.button9.TabIndex = 10;
@@ -291,11 +286,11 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button10.ForeColor = System.Drawing.Color.DarkRed;
-            this.button10.Location = new System.Drawing.Point(554, 359);
+            this.button10.Location = new System.Drawing.Point(685, 332);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(118, 31);
             this.button10.TabIndex = 11;
-            this.button10.Text = "Wypozyczalnia";
+            this.button10.Text = "Wypożyczalnia";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Visible = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
@@ -306,7 +301,7 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button11.ForeColor = System.Drawing.Color.DarkRed;
-            this.button11.Location = new System.Drawing.Point(147, 409);
+            this.button11.Location = new System.Drawing.Point(278, 382);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(118, 31);
             this.button11.TabIndex = 12;
@@ -321,7 +316,7 @@
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button12.ForeColor = System.Drawing.Color.DarkRed;
-            this.button12.Location = new System.Drawing.Point(354, 409);
+            this.button12.Location = new System.Drawing.Point(485, 382);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(118, 31);
             this.button12.TabIndex = 13;
@@ -336,7 +331,7 @@
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button13.ForeColor = System.Drawing.Color.DarkRed;
-            this.button13.Location = new System.Drawing.Point(554, 409);
+            this.button13.Location = new System.Drawing.Point(685, 382);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(118, 31);
             this.button13.TabIndex = 14;
@@ -355,55 +350,10 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Kontakt";
             // 
-            // button15
-            // 
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button15.ForeColor = System.Drawing.Color.DarkRed;
-            this.button15.Location = new System.Drawing.Point(767, 359);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(118, 31);
-            this.button15.TabIndex = 18;
-            this.button15.Text = "Info o Autorze";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Visible = false;
-            // 
-            // button16
-            // 
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button16.ForeColor = System.Drawing.Color.DarkRed;
-            this.button16.Location = new System.Drawing.Point(767, 310);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(118, 31);
-            this.button16.TabIndex = 17;
-            this.button16.Text = "Opis ";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Visible = false;
-            // 
-            // button17
-            // 
-            this.button17.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button17.FlatAppearance.BorderSize = 0;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button17.ForeColor = System.Drawing.Color.DarkRed;
-            this.button17.Image = ((System.Drawing.Image)(resources.GetObject("button17.Image")));
-            this.button17.Location = new System.Drawing.Point(743, 190);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(207, 99);
-            this.button17.TabIndex = 16;
-            this.button17.Text = "Informacje o programie";
-            this.button17.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.MouseEnter += new System.EventHandler(this.button17_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(95, 283);
+            this.pictureBox1.Location = new System.Drawing.Point(226, 256);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(208, 185);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -413,7 +363,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(309, 283);
+            this.pictureBox2.Location = new System.Drawing.Point(440, 256);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(208, 185);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -423,22 +373,12 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(523, 283);
+            this.pictureBox3.Location = new System.Drawing.Point(654, 256);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(208, 185);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(742, 283);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(208, 185);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 22;
-            this.pictureBox4.TabStop = false;
             // 
             // MenuWindow
             // 
@@ -446,13 +386,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkKhaki;
             this.ClientSize = new System.Drawing.Size(1068, 654);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button17);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
@@ -480,7 +416,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,9 +428,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
@@ -513,7 +445,6 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;

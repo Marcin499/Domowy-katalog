@@ -50,6 +50,7 @@ namespace Katalog
                   
         private void button17_Click_1(object sender, EventArgs e)
         {
+            //button usuń
             if (MessageBox.Show("Czy napewno chcesz usunąć dane?", "Uwaga", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
             {
                 MessageBox.Show("Anulowano operacje");
@@ -68,8 +69,7 @@ namespace Katalog
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "Delete from BazaFilmów Where ID = '" + textBox1.Text + "'";
-                cmd.ExecuteNonQuery();
-                con.Close();
+                cmd.ExecuteNonQuery();                
                 textBox1.Clear();
                 textBox2.Clear();
                 textBox3.Clear();
@@ -83,6 +83,7 @@ namespace Katalog
 
         private void button18_Click_1(object sender, EventArgs e)
         {
+            //button odśwież
             con.Close();
             con.Open();
             SqlCommand cmd = con.CreateCommand();
@@ -97,6 +98,7 @@ namespace Katalog
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            //Click na baze danych
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
@@ -113,10 +115,10 @@ namespace Katalog
         private void button19_Click_1(object sender, EventArgs e)
         {
 
-            //Otwieranie wyszukiwarki Google
+           
             Process.Start("https://www.google.com/search?q=" + textBox2.Text);
         }
-
+        //Wyszukaj
         private void button2_Click_1(object sender, EventArgs e)
         {
             con.Close();
@@ -129,7 +131,7 @@ namespace Katalog
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
             sa.Fill(dt);
             dataGridView1.DataSource = dt;
-            con.Close();
+            
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -144,7 +146,7 @@ namespace Katalog
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
             sa.Fill(dt);
             dataGridView1.DataSource = dt;
-            con.Close();
+            
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -158,8 +160,7 @@ namespace Katalog
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
             sa.Fill(dt);
-            dataGridView1.DataSource = dt;
-            con.Close();
+            dataGridView1.DataSource = dt;            
             textBox3.Clear();
         }
 
@@ -174,8 +175,7 @@ namespace Katalog
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
             sa.Fill(dt);
-            dataGridView1.DataSource = dt;
-            con.Close();
+            dataGridView1.DataSource = dt;            
             textBox4.Clear();
         }
 
@@ -190,8 +190,7 @@ namespace Katalog
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
             sa.Fill(dt);
-            dataGridView1.DataSource = dt;
-            con.Close();
+            dataGridView1.DataSource = dt;            
             textBox5.Clear();
         }
 
@@ -206,8 +205,7 @@ namespace Katalog
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
             sa.Fill(dt);
-            dataGridView1.DataSource = dt;
-            con.Close();
+            dataGridView1.DataSource = dt;            
             textBox6.Clear();
         }
 
@@ -222,13 +220,14 @@ namespace Katalog
             DataTable dt = new DataTable();
             SqlDataAdapter sa = new SqlDataAdapter(cmd);
             sa.Fill(dt);
-            dataGridView1.DataSource = dt;
-            con.Close();
+            dataGridView1.DataSource = dt;            
             textBox7.Clear();
         }
 
+        //Aktualizuj
         private void button15_Click_1(object sender, EventArgs e)
         {
+            con.Close();
             try
             {
                 con.Open();
@@ -251,11 +250,12 @@ namespace Katalog
             {
                 MessageBox.Show("Bląd! Spróbuj ponownie.", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            con.Close();
+            
         }
 
         private void button14_Click_1(object sender, EventArgs e)
         {
+            con.Close();
             try
             {
                 con.Open();
@@ -278,11 +278,12 @@ namespace Katalog
             {
                 MessageBox.Show("Bląd! Spróbuj ponownie.", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            con.Close();
+           
         }
 
         private void button13_Click_1(object sender, EventArgs e)
         {
+            con.Close();
             try
             {
                 con.Open();
@@ -305,11 +306,12 @@ namespace Katalog
             {
                 MessageBox.Show("Bląd! Spróbuj ponownie.", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            con.Close();
+            
         }
 
         private void button12_Click_1(object sender, EventArgs e)
         {
+            con.Close();
             try
             {
                 con.Open();
@@ -332,11 +334,12 @@ namespace Katalog
             {
                 MessageBox.Show("Bląd! Spróbuj ponownie.", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            con.Close();
+            
         }
 
         private void button11_Click_1(object sender, EventArgs e)
         {
+            con.Close();
             try
             {
                 con.Open();
@@ -359,11 +362,12 @@ namespace Katalog
             {
                 MessageBox.Show("Bląd! Spróbuj ponownie.", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            con.Close();
+            
         }
 
         private void button10_Click_1(object sender, EventArgs e)
         {
+            con.Close();
             try
             {
                 con.Open();
@@ -386,11 +390,12 @@ namespace Katalog
             {
                 MessageBox.Show("Bląd! Spróbuj ponownie.", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            con.Close();
+            
         }
 
         private void button9_Click_1(object sender, EventArgs e)
         {
+            con.Close();
             try
             {
                 con.Open();
@@ -413,9 +418,10 @@ namespace Katalog
             {
                 MessageBox.Show("Bląd! Spróbuj ponownie.", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            con.Close();
+            
         }
 
+        //Sortowanie
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
             con.Close();
@@ -431,7 +437,7 @@ namespace Katalog
                 sa.Fill(dt);
                 dataGridView1.DataSource = dt;
                 cmd.ExecuteNonQuery();
-                con.Close();
+                
             }
             else
             {
@@ -444,7 +450,7 @@ namespace Katalog
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
                 sa.Fill(dt);
                 dataGridView1.DataSource = dt;
-                con.Close();
+                
             }
         }
 
@@ -463,7 +469,7 @@ namespace Katalog
                 sa.Fill(dt);
                 dataGridView1.DataSource = dt;
                 cmd.ExecuteNonQuery();
-                con.Close();
+                
             }
             else
             {
@@ -476,7 +482,7 @@ namespace Katalog
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
                 sa.Fill(dt);
                 dataGridView1.DataSource = dt;
-                con.Close();
+                
             }
         }
 
@@ -495,7 +501,7 @@ namespace Katalog
                 sa.Fill(dt);
                 dataGridView1.DataSource = dt;
                 cmd.ExecuteNonQuery();
-                con.Close();
+               
             }
             else
             {
@@ -508,7 +514,7 @@ namespace Katalog
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
                 sa.Fill(dt);
                 dataGridView1.DataSource = dt;
-                con.Close();
+                
             }
         }
 
@@ -527,7 +533,7 @@ namespace Katalog
                 sa.Fill(dt);
                 dataGridView1.DataSource = dt;
                 cmd.ExecuteNonQuery();
-                con.Close();
+                
             }
             else
             {
@@ -540,7 +546,7 @@ namespace Katalog
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
                 sa.Fill(dt);
                 dataGridView1.DataSource = dt;
-                con.Close();
+                
             }
         }
 
@@ -559,7 +565,7 @@ namespace Katalog
                 sa.Fill(dt);
                 dataGridView1.DataSource = dt;
                 cmd.ExecuteNonQuery();
-                con.Close();
+                
             }
             else
             {
@@ -572,7 +578,7 @@ namespace Katalog
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
                 sa.Fill(dt);
                 dataGridView1.DataSource = dt;
-                con.Close();
+                
             }
         }
 
@@ -591,7 +597,7 @@ namespace Katalog
                 sa.Fill(dt);
                 dataGridView1.DataSource = dt;
                 cmd.ExecuteNonQuery();
-                con.Close();
+               
             }
             else
             {
@@ -604,7 +610,7 @@ namespace Katalog
                 SqlDataAdapter sa = new SqlDataAdapter(cmd);
                 sa.Fill(dt);
                 dataGridView1.DataSource = dt;
-                con.Close();
+                
             }
         }
     }

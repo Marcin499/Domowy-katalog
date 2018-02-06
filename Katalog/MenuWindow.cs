@@ -25,7 +25,7 @@ namespace Katalog
 
         private void button2_Click(object sender, EventArgs e)
         {         
-            
+            // button ksiazek
             button5.Visible = true;
             button8.Visible = true;
             button11.Visible = true;
@@ -34,19 +34,18 @@ namespace Katalog
             button12.Visible = false;
             button7.Visible = false;
             button10.Visible = false;
-            button13.Visible = false;
-            button15.Visible = false;
-            button16.Visible = false;
+            button13.Visible = false;            
             pictureBox1.Visible = false;
             pictureBox2.Visible = true;
             pictureBox3.Visible = true;
-            pictureBox4.Visible = true;
+            
 
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //button filmów
             button5.Visible = false;
             button8.Visible = false;
             button11.Visible = false;
@@ -55,17 +54,16 @@ namespace Katalog
             button12.Visible = true;
             button7.Visible = false;
             button10.Visible = false;
-            button13.Visible = false;
-            button15.Visible = false;
-            button16.Visible = false;
+            button13.Visible = false;            
             pictureBox2.Visible = false;
             pictureBox1.Visible = true;
             pictureBox3.Visible = true;
-            pictureBox4.Visible = true;
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //button muzyki
             button5.Visible = false;
             button8.Visible = false;
             button11.Visible = false;
@@ -74,33 +72,14 @@ namespace Katalog
             button12.Visible = false;
             button7.Visible = true;
             button10.Visible = true;
-            button13.Visible = true;
-            button15.Visible = false;
-            button16.Visible = false;
+            button13.Visible = true;            
             pictureBox1.Visible = true;
             pictureBox2.Visible = true;
             pictureBox3.Visible = false;
-            pictureBox4.Visible = true;
+            
         }
 
-        private void button17_Click(object sender, EventArgs e)
-        {
-            button5.Visible = false;
-            button8.Visible = false;
-            button11.Visible = false;
-            button6.Visible = false;
-            button9.Visible = false;
-            button12.Visible = false;
-            button7.Visible = false;
-            button10.Visible = false;
-            button13.Visible = false;
-            button15.Visible = true;
-            button16.Visible = true;
-            pictureBox1.Visible = true;
-            pictureBox2.Visible = true;
-            pictureBox3.Visible = true;
-            pictureBox4.Visible = false;
-        }
+        
 
         private void Menu_Load(object sender, EventArgs e)
         {

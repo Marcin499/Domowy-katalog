@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilmyWypozyczenie));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -73,6 +73,16 @@
             this.panel1.Size = new System.Drawing.Size(1098, 100);
             this.panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("French Script MT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(422, 42);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Domowy katalog - Wypozyczalnia";
+            // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
@@ -85,16 +95,6 @@
             this.toolTip1.SetToolTip(this.button1, "Zamknij");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("French Script MT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(422, 42);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Domowy katalog - Wypozyczalnia";
             // 
             // label8
             // 
@@ -262,7 +262,7 @@
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(82, 62);
             this.button17.TabIndex = 84;
-            this.toolTip1.SetToolTip(this.button17, "Usun");
+            this.toolTip1.SetToolTip(this.button17, "Usuń");
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 

@@ -15,7 +15,7 @@ namespace Katalog
     {
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-BPE4OM3;Initial Catalog=BazaKsiążki;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         public KsiazkiWypozyczenie()
-        {
+        {// Alert o zwrocie
             InitializeComponent();
             
             con.Close();
@@ -65,7 +65,7 @@ namespace Katalog
         }
 
         private void button16_Click(object sender, EventArgs e)
-        {
+        {// button Dodaj
             if (textBox1.Text == "")
             {
                 MessageBox.Show("Uzupełnij dane!");
