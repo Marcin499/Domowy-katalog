@@ -71,10 +71,19 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\..\Desktop\InnerVisual-Bunifu_UI_v1.5.3 Crack\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -128,6 +137,22 @@
     <Compile Include="MenuWindow.Designer.cs">
       <DependentUpon>MenuWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901041519256_jeden.cs" />
+    <Compile Include="Migrations\201901041519256_jeden.Designer.cs">
+      <DependentUpon>201901041519256_jeden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901041647090_dwa.cs" />
+    <Compile Include="Migrations\201901041647090_dwa.Designer.cs">
+      <DependentUpon>201901041647090_dwa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ModelEntity\BazaFilmy.cs" />
+    <Compile Include="ModelEntity\BazaFilmówWypożyczenie.cs" />
+    <Compile Include="ModelEntity\BazaKsiążki.cs" />
+    <Compile Include="ModelEntity\BazaKsiążekWypożyczenie.cs" />
+    <Compile Include="ModelEntity\BazaMuzyka.cs" />
+    <Compile Include="ModelEntity\BazaMuzykiWypożyczenie.cs" />
+    <Compile Include="ModelEntity\ModelContext.cs" />
     <Compile Include="MuzykiWypozyczenie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +200,12 @@
     <EmbeddedResource Include="MenuWindow.resx">
       <DependentUpon>MenuWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901041519256_jeden.resx">
+      <DependentUpon>201901041519256_jeden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901041647090_dwa.resx">
+      <DependentUpon>201901041647090_dwa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MuzykiWypozyczenie.resx">
       <DependentUpon>MuzykiWypozyczenie.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +229,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Katalog_TemporaryKey.pfx" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -226,5 +258,9 @@
   <ItemGroup>
     <Content Include="Ring_Binders-512.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
