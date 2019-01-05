@@ -36,8 +36,7 @@ namespace Katalog
 
         private void button16_Click(object sender, EventArgs e)
         {
-            OknoDodajMuzyka odm = new OknoDodajMuzyka();
-            odm.Show();
+          
         }
 
         private void button17_Click(object sender, EventArgs e)

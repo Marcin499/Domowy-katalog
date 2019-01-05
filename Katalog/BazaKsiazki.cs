@@ -34,8 +34,7 @@ namespace Katalog
 
         private void button16_Click(object sender, EventArgs e)
         {
-            OknoDodaj od = new OknoDodaj();
-            od.Show();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -605,6 +604,11 @@ namespace Katalog
                 dataGridView1.DataSource = dt;
                 
             }
+        }
+
+        private void BazaKsiazki_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

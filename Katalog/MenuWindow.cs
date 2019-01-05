@@ -127,8 +127,9 @@ namespace Katalog
 
         private void button6_Click(object sender, EventArgs e)
         {
-            BazaFilmów bf = new BazaFilmów();
-            bf.Show();
+
+            Filmy filmy = new Filmy();
+            filmy.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)

@@ -95,12 +95,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BazaFilmów.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BazaFilmów.Designer.cs">
-      <DependentUpon>BazaFilmów.cs</DependentUpon>
-    </Compile>
     <Compile Include="BazaKsiazki.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +112,12 @@
     </Compile>
     <Compile Include="email.Designer.cs">
       <DependentUpon>email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filmy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filmy.Designer.cs">
+      <DependentUpon>Filmy.cs</DependentUpon>
     </Compile>
     <Compile Include="FilmyWypozyczenie.cs">
       <SubType>Form</SubType>
@@ -159,29 +159,8 @@
     <Compile Include="MuzykiWypozyczenie.Designer.cs">
       <DependentUpon>MuzykiWypozyczenie.cs</DependentUpon>
     </Compile>
-    <Compile Include="OknoDodaj.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OknoDodaj.Designer.cs">
-      <DependentUpon>OknoDodaj.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OknoDodajFilmy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OknoDodajFilmy.Designer.cs">
-      <DependentUpon>OknoDodajFilmy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OknoDodajMuzyka.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OknoDodajMuzyka.Designer.cs">
-      <DependentUpon>OknoDodajMuzyka.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BazaFilmów.resx">
-      <DependentUpon>BazaFilmów.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BazaKsiazki.resx">
       <DependentUpon>BazaKsiazki.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="email.resx">
       <DependentUpon>email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filmy.resx">
+      <DependentUpon>Filmy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FilmyWypozyczenie.resx">
       <DependentUpon>FilmyWypozyczenie.cs</DependentUpon>
@@ -208,15 +190,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MuzykiWypozyczenie.resx">
       <DependentUpon>MuzykiWypozyczenie.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OknoDodaj.resx">
-      <DependentUpon>OknoDodaj.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OknoDodajFilmy.resx">
-      <DependentUpon>OknoDodajFilmy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OknoDodajMuzyka.resx">
-      <DependentUpon>OknoDodajMuzyka.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

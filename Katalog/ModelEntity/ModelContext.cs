@@ -13,7 +13,7 @@ namespace Katalog.ModelEntity
         {
 
         }
-        public DbSet<BazaFilmy> Filmy { get; set; }
+        public DbSet<BazaFilmy> BazaFilmy { get; set; }
         public DbSet<BazaFilmówWypożyczenie>FilmyWypożyczenie { get; set; }
         public DbSet<BazaKsiążki> BazaKsiążki { get; set; }
         public DbSet<BazaKsiążekWypożyczenie> KsiążkiWypożyczenie { get; set; }
