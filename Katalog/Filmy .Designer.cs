@@ -1,6 +1,6 @@
 ﻿namespace Katalog
 {
-    partial class Filmy
+    partial class Książki
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Filmy));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Książki));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Zamknij = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Przegladaj = new System.Windows.Forms.Button();
-            this.Odswiez = new System.Windows.Forms.Button();
+            this.Aktualizuj = new System.Windows.Forms.Button();
             this.Usun = new System.Windows.Forms.Button();
             this.Dodaj = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
@@ -55,6 +56,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.SortujCzasTrwania = new System.Windows.Forms.CheckBox();
+            this.Szukaj = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +70,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(781, 457);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1CellContentClick);
             // 
             // panel1
             // 
@@ -88,8 +92,9 @@
             this.Zamknij.Name = "Zamknij";
             this.Zamknij.Size = new System.Drawing.Size(50, 31);
             this.Zamknij.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.Zamknij, "Zamknij");
             this.Zamknij.UseVisualStyleBackColor = true;
-            this.Zamknij.Click += new System.EventHandler(this.Zamknij_Click);
+            this.Zamknij.Click += new System.EventHandler(this.ZamknijClick);
             // 
             // label1
             // 
@@ -110,20 +115,22 @@
             this.Przegladaj.Name = "Przegladaj";
             this.Przegladaj.Size = new System.Drawing.Size(82, 62);
             this.Przegladaj.TabIndex = 137;
+            this.toolTip1.SetToolTip(this.Przegladaj, "Przeglądaj");
             this.Przegladaj.UseVisualStyleBackColor = true;
-            this.Przegladaj.Click += new System.EventHandler(this.Przegladaj_Click);
+            this.Przegladaj.Click += new System.EventHandler(this.PrzegladajClick);
             // 
-            // Odswiez
+            // Aktualizuj
             // 
-            this.Odswiez.FlatAppearance.BorderSize = 0;
-            this.Odswiez.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Odswiez.Image = ((System.Drawing.Image)(resources.GetObject("Odswiez.Image")));
-            this.Odswiez.Location = new System.Drawing.Point(893, 610);
-            this.Odswiez.Name = "Odswiez";
-            this.Odswiez.Size = new System.Drawing.Size(82, 62);
-            this.Odswiez.TabIndex = 136;
-            this.Odswiez.UseVisualStyleBackColor = true;
-            this.Odswiez.Click += new System.EventHandler(this.Odswiez_Click);
+            this.Aktualizuj.FlatAppearance.BorderSize = 0;
+            this.Aktualizuj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Aktualizuj.Image = ((System.Drawing.Image)(resources.GetObject("Aktualizuj.Image")));
+            this.Aktualizuj.Location = new System.Drawing.Point(893, 610);
+            this.Aktualizuj.Name = "Aktualizuj";
+            this.Aktualizuj.Size = new System.Drawing.Size(82, 62);
+            this.Aktualizuj.TabIndex = 136;
+            this.toolTip1.SetToolTip(this.Aktualizuj, "Aktualizuj");
+            this.Aktualizuj.UseVisualStyleBackColor = true;
+            this.Aktualizuj.Click += new System.EventHandler(this.AktualizujClick);
             // 
             // Usun
             // 
@@ -134,8 +141,9 @@
             this.Usun.Name = "Usun";
             this.Usun.Size = new System.Drawing.Size(82, 62);
             this.Usun.TabIndex = 135;
+            this.toolTip1.SetToolTip(this.Usun, "Usuń");
             this.Usun.UseVisualStyleBackColor = true;
-            this.Usun.Click += new System.EventHandler(this.Usun_Click);
+            this.Usun.Click += new System.EventHandler(this.UsunClick);
             // 
             // Dodaj
             // 
@@ -146,6 +154,7 @@
             this.Dodaj.Name = "Dodaj";
             this.Dodaj.Size = new System.Drawing.Size(82, 62);
             this.Dodaj.TabIndex = 134;
+            this.toolTip1.SetToolTip(this.Dodaj, "Dodaj");
             this.Dodaj.UseVisualStyleBackColor = true;
             this.Dodaj.Click += new System.EventHandler(this.DodajClick);
             // 
@@ -169,6 +178,7 @@
             this.SortujGatunki.TabIndex = 161;
             this.SortujGatunki.Text = "Gatunków";
             this.SortujGatunki.UseVisualStyleBackColor = true;
+            this.SortujGatunki.CheckedChanged += new System.EventHandler(this.SortujGatunkiCheckedChanged);
             // 
             // SortujDatyPremiery
             // 
@@ -180,6 +190,7 @@
             this.SortujDatyPremiery.TabIndex = 160;
             this.SortujDatyPremiery.Text = "Daty premier";
             this.SortujDatyPremiery.UseVisualStyleBackColor = true;
+            this.SortujDatyPremiery.CheckedChanged += new System.EventHandler(this.SortujDatyPremieryCheckedChanged);
             // 
             // SortujWytwornii
             // 
@@ -191,6 +202,7 @@
             this.SortujWytwornii.TabIndex = 159;
             this.SortujWytwornii.Text = "Wytwórnii";
             this.SortujWytwornii.UseVisualStyleBackColor = true;
+            this.SortujWytwornii.CheckedChanged += new System.EventHandler(this.SortujWytworniiCheckedChanged);
             // 
             // SortujRezyserow
             // 
@@ -202,6 +214,7 @@
             this.SortujRezyserow.TabIndex = 158;
             this.SortujRezyserow.Text = "Reżyserów";
             this.SortujRezyserow.UseVisualStyleBackColor = true;
+            this.SortujRezyserow.CheckedChanged += new System.EventHandler(this.SortujRezyserowCheckedChanged);
             // 
             // SortujTytuły
             // 
@@ -213,6 +226,7 @@
             this.SortujTytuły.TabIndex = 157;
             this.SortujTytuły.Text = "Tytułów";
             this.SortujTytuły.UseVisualStyleBackColor = true;
+            this.SortujTytuły.CheckedChanged += new System.EventHandler(this.SortujTytułyCheckedChanged);
             // 
             // textBox6
             // 
@@ -322,12 +336,37 @@
             this.label2.TabIndex = 164;
             this.label2.Text = "Czas trwania";
             // 
-            // Filmy
+            // SortujCzasTrwania
+            // 
+            this.SortujCzasTrwania.AutoSize = true;
+            this.SortujCzasTrwania.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SortujCzasTrwania.Location = new System.Drawing.Point(287, 643);
+            this.SortujCzasTrwania.Name = "SortujCzasTrwania";
+            this.SortujCzasTrwania.Size = new System.Drawing.Size(112, 20);
+            this.SortujCzasTrwania.TabIndex = 165;
+            this.SortujCzasTrwania.Text = "Czasu  trwania";
+            this.SortujCzasTrwania.UseVisualStyleBackColor = true;
+            this.SortujCzasTrwania.CheckedChanged += new System.EventHandler(this.SortujCzasTrwaniaCheckedChanged);
+            // 
+            // Szukaj
+            // 
+            this.Szukaj.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Szukaj.Location = new System.Drawing.Point(164, 496);
+            this.Szukaj.Name = "Szukaj";
+            this.Szukaj.Size = new System.Drawing.Size(99, 31);
+            this.Szukaj.TabIndex = 166;
+            this.Szukaj.Text = "Szukaj";
+            this.Szukaj.UseVisualStyleBackColor = true;
+            this.Szukaj.Click += new System.EventHandler(this.SzukajClick);
+            // 
+            // Książki
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkKhaki;
             this.ClientSize = new System.Drawing.Size(1248, 683);
+            this.Controls.Add(this.Szukaj);
+            this.Controls.Add(this.SortujCzasTrwania);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label18);
@@ -347,14 +386,14 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Przegladaj);
-            this.Controls.Add(this.Odswiez);
+            this.Controls.Add(this.Aktualizuj);
             this.Controls.Add(this.Usun);
             this.Controls.Add(this.Dodaj);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Filmy";
+            this.Name = "Książki";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Filmy";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -372,7 +411,7 @@
         private System.Windows.Forms.Button Zamknij;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Przegladaj;
-        private System.Windows.Forms.Button Odswiez;
+        private System.Windows.Forms.Button Aktualizuj;
         private System.Windows.Forms.Button Usun;
         private System.Windows.Forms.Button Dodaj;
         private System.Windows.Forms.Label label18;
@@ -393,5 +432,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox SortujCzasTrwania;
+        private System.Windows.Forms.Button Szukaj;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -128,7 +128,7 @@ namespace Katalog
         private void button6_Click(object sender, EventArgs e)
         {
 
-            Filmy filmy = new Filmy();
+            Książki filmy = new Książki();
             filmy.Show();
         }
 
