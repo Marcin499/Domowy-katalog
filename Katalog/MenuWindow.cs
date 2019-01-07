@@ -106,7 +106,7 @@ namespace Katalog
 
         private void button5_Click(object sender, EventArgs e)
         {
-            BazaKsiazki bk = new BazaKsiazki();
+            KsiążkiBaza bk = new KsiążkiBaza();
             bk.Show();
         }
 
@@ -134,7 +134,7 @@ namespace Katalog
 
         private void button7_Click(object sender, EventArgs e)
         {
-            BazaMuzyka bm = new BazaMuzyka();
+            MuzykaBaza bm = new MuzykaBaza();
             bm.Show();
         }
 

@@ -11,13 +11,15 @@ using System.Windows.Forms;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Diagnostics;
+using log4net;
 
 namespace Katalog
 {
     public partial class Książki : Form
     {
         ModelContext modelContext = new ModelContext();
-        BazaFilmy bazaFilmy = new BazaFilmy();       
+        BazaFilmy bazaFilmy = new BazaFilmy();
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         public Książki()
         {
@@ -25,31 +27,33 @@ namespace Katalog
             Wyswietl();
         }
                 
-        private void DodajClick(object sender, EventArgs e)
+        private void DodajFilmyClick(object sender, EventArgs e)
         {
             try
             {
                 if (Walidacja())
-                {
-                    
-                    bazaFilmy.Tytuł = textBox1.Text;
-                    bazaFilmy.Reżyseria = textBox3.Text;
-                    bazaFilmy.Wytwórnia = textBox4.Text;
+                {                    
+                    bazaFilmy.Tytuł = textBox1.Text.Trim();
+                    bazaFilmy.Reżyseria = textBox3.Text.Trim();
+                    bazaFilmy.Wytwórnia = textBox4.Text.Trim();
                     bazaFilmy.DataPremiery = Convert.ToDateTime(textBox5.Text);
-                    bazaFilmy.Gatunek = textBox6.Text;
+                    bazaFilmy.Gatunek = textBox6.Text.Trim();
                     bazaFilmy.CzasTrwania = Convert.ToInt32(textBox7.Text);
                     modelContext.BazaFilmy.Add(bazaFilmy);
                     modelContext.SaveChanges();
+                    MessageBox.Show("Dodano nowy rekord.");
+                    log.Info("Dane zapisano poprawnie.");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Błąd!!!");
+                log.Error("Błąd!", ex);
             }
             Wyswietl();
         }
 
-        private void UsunClick(object sender, EventArgs e)
+        private void UsunFilmyClick(object sender, EventArgs e)
         {
             try
             {
@@ -60,53 +64,64 @@ namespace Katalog
                     modelContext.BazaFilmy.Remove(bazaFilmy);
                     modelContext.SaveChanges();
                     MessageBox.Show("Usunieto Dane!");
+                    log.Info("Dane usunięto poprawnie.");
                 }
             }
-            catch (Exception )
+            catch (Exception ex)
             {
                 MessageBox.Show("Błąd!");
+                log.Error("Błąd!", ex);
             }
             Wyswietl();
         }
 
-        private void AktualizujClick(object sender, EventArgs e)
+        private void AktualizujFilmyClick(object sender, EventArgs e)
         {
-            bazaFilmy.Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value);
-            bazaFilmy = modelContext.BazaFilmy.Where(x => x.Id == bazaFilmy.Id).FirstOrDefault();
-            modelContext.BazaFilmy.Remove(bazaFilmy);
-            modelContext.SaveChanges();
+            try
+            {
+                bazaFilmy.Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value);
+                bazaFilmy = modelContext.BazaFilmy.Where(x => x.Id == bazaFilmy.Id).FirstOrDefault();
+                modelContext.BazaFilmy.Remove(bazaFilmy);
+                modelContext.SaveChanges();
 
-            if (!string.IsNullOrEmpty(textBox1.Text))
-            {
-                bazaFilmy.Tytuł = textBox1.Text;
-                modelContext.BazaFilmy.Add(bazaFilmy);
+                if (!string.IsNullOrEmpty(textBox1.Text))
+                {
+                    bazaFilmy.Tytuł = textBox1.Text.Trim();
+                    modelContext.BazaFilmy.Add(bazaFilmy);
+                }
+                if (!string.IsNullOrEmpty(textBox3.Text))
+                {
+                    bazaFilmy.Reżyseria = textBox3.Text.Trim();
+                    modelContext.BazaFilmy.Add(bazaFilmy);
+                }
+                if (!string.IsNullOrEmpty(textBox4.Text))
+                {
+                    bazaFilmy.Wytwórnia = textBox4.Text.Trim();
+                    modelContext.BazaFilmy.Attach(bazaFilmy);
+                }
+                if (!string.IsNullOrEmpty(textBox5.Text))
+                {
+                    bazaFilmy.DataPremiery = Convert.ToDateTime(textBox5.Text);
+                    modelContext.BazaFilmy.Add(bazaFilmy);
+                }
+                if (!string.IsNullOrEmpty(textBox6.Text))
+                {
+                    bazaFilmy.Gatunek = textBox6.Text.Trim();
+                    modelContext.BazaFilmy.Add(bazaFilmy);
+                }
+                if (!string.IsNullOrEmpty(textBox7.Text))
+                {
+                    bazaFilmy.CzasTrwania = Convert.ToInt32(textBox7.Text);
+                    modelContext.BazaFilmy.Add(bazaFilmy);
+                }
+                    modelContext.SaveChanges();
+                    log.Info("Dane zaktualizowano poprawnie.");
             }
-            if (!string.IsNullOrEmpty(textBox3.Text))
+             catch (Exception ex)
             {
-                bazaFilmy.Reżyseria = textBox3.Text;
-                modelContext.BazaFilmy.Add(bazaFilmy);                
+                MessageBox.Show("Błąd!");
+                log.Error("Błąd!", ex);
             }
-            if (!string.IsNullOrEmpty(textBox4.Text) )
-            {
-                bazaFilmy.Wytwórnia = textBox4.Text;
-                modelContext.BazaFilmy.Attach(bazaFilmy);               
-            }
-            if (!string.IsNullOrEmpty(textBox5.Text))
-            {
-                bazaFilmy.DataPremiery = Convert.ToDateTime(textBox5.Text);
-                modelContext.BazaFilmy.Add(bazaFilmy);                
-            }
-            if (!string.IsNullOrEmpty(textBox6.Text))
-            {
-                bazaFilmy.Gatunek = textBox6.Text;
-                modelContext.BazaFilmy.Add(bazaFilmy);                
-            }
-            if (!string.IsNullOrEmpty(textBox7.Text))
-            {
-                bazaFilmy.CzasTrwania = Convert.ToInt32(textBox7.Text);
-                modelContext.BazaFilmy.Add(bazaFilmy);
-            }
-            modelContext.SaveChanges();
             Wyswietl();
         }
 
@@ -115,7 +130,7 @@ namespace Katalog
             Process.Start("https://www.google.com/search?q=" + textBox1.Text);
         }
 
-        private void dataGridView1CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridViewCellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if(dataGridView1.CurrentRow.Index != -1)
             {
@@ -182,7 +197,7 @@ namespace Katalog
             }
         }
 
-        private void SortujTytułyCheckedChanged(object sender, EventArgs e)
+        private void SortujTytułyFilmyCheckedChanged(object sender, EventArgs e)
         {
             if (SortujTytuły.Checked)
             {
@@ -201,7 +216,7 @@ namespace Katalog
             }
         }
 
-        private void SortujRezyserowCheckedChanged(object sender, EventArgs e)
+        private void SortujRezyserowFilmyCheckedChanged(object sender, EventArgs e)
         {
             if (SortujRezyserow.Checked)
             {
@@ -220,7 +235,7 @@ namespace Katalog
             }
         }
 
-        private void SortujWytworniiCheckedChanged(object sender, EventArgs e)
+        private void SortujWytworniiFilmyCheckedChanged(object sender, EventArgs e)
         {
             if (SortujWytwornii.Checked)
             {
@@ -239,7 +254,7 @@ namespace Katalog
             }
         }
 
-        private void SortujDatyPremieryCheckedChanged(object sender, EventArgs e)
+        private void SortujDatyPremieryFilmyCheckedChanged(object sender, EventArgs e)
         {
             if (SortujDatyPremiery.Checked)
             {
@@ -258,7 +273,7 @@ namespace Katalog
             }
         }
 
-        private void SortujGatunkiCheckedChanged(object sender, EventArgs e)
+        private void SortujGatunkiFilmyCheckedChanged(object sender, EventArgs e)
         {
             if (SortujGatunki.Checked)
             {
@@ -277,7 +292,7 @@ namespace Katalog
             }
         }
 
-        private void SortujCzasTrwaniaCheckedChanged(object sender, EventArgs e)
+        private void SortujCzasTrwaniaFilmyCheckedChanged(object sender, EventArgs e)
         {
             if (SortujCzasTrwania.Checked)
             {
@@ -296,7 +311,7 @@ namespace Katalog
             }
         }
 
-        private void SzukajClick(object sender, EventArgs e)
+        private void SzukajFilmyClick(object sender, EventArgs e)
         {
             IQueryable<BazaFilmy> baza = modelContext.BazaFilmy;
             if (!string.IsNullOrEmpty(textBox1.Text))

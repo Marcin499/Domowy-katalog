@@ -70,7 +70,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(781, 457);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCellContentClick);
             // 
             // panel1
             // 
@@ -130,7 +130,7 @@
             this.Aktualizuj.TabIndex = 136;
             this.toolTip1.SetToolTip(this.Aktualizuj, "Aktualizuj");
             this.Aktualizuj.UseVisualStyleBackColor = true;
-            this.Aktualizuj.Click += new System.EventHandler(this.AktualizujClick);
+            this.Aktualizuj.Click += new System.EventHandler(this.AktualizujFilmyClick);
             // 
             // Usun
             // 
@@ -143,7 +143,7 @@
             this.Usun.TabIndex = 135;
             this.toolTip1.SetToolTip(this.Usun, "Usuń");
             this.Usun.UseVisualStyleBackColor = true;
-            this.Usun.Click += new System.EventHandler(this.UsunClick);
+            this.Usun.Click += new System.EventHandler(this.UsunFilmyClick);
             // 
             // Dodaj
             // 
@@ -156,7 +156,7 @@
             this.Dodaj.TabIndex = 134;
             this.toolTip1.SetToolTip(this.Dodaj, "Dodaj");
             this.Dodaj.UseVisualStyleBackColor = true;
-            this.Dodaj.Click += new System.EventHandler(this.DodajClick);
+            this.Dodaj.Click += new System.EventHandler(this.DodajFilmyClick);
             // 
             // label18
             // 
@@ -178,7 +178,7 @@
             this.SortujGatunki.TabIndex = 161;
             this.SortujGatunki.Text = "Gatunków";
             this.SortujGatunki.UseVisualStyleBackColor = true;
-            this.SortujGatunki.CheckedChanged += new System.EventHandler(this.SortujGatunkiCheckedChanged);
+            this.SortujGatunki.CheckedChanged += new System.EventHandler(this.SortujGatunkiFilmyCheckedChanged);
             // 
             // SortujDatyPremiery
             // 
@@ -190,7 +190,7 @@
             this.SortujDatyPremiery.TabIndex = 160;
             this.SortujDatyPremiery.Text = "Daty premier";
             this.SortujDatyPremiery.UseVisualStyleBackColor = true;
-            this.SortujDatyPremiery.CheckedChanged += new System.EventHandler(this.SortujDatyPremieryCheckedChanged);
+            this.SortujDatyPremiery.CheckedChanged += new System.EventHandler(this.SortujDatyPremieryFilmyCheckedChanged);
             // 
             // SortujWytwornii
             // 
@@ -202,7 +202,7 @@
             this.SortujWytwornii.TabIndex = 159;
             this.SortujWytwornii.Text = "Wytwórnii";
             this.SortujWytwornii.UseVisualStyleBackColor = true;
-            this.SortujWytwornii.CheckedChanged += new System.EventHandler(this.SortujWytworniiCheckedChanged);
+            this.SortujWytwornii.CheckedChanged += new System.EventHandler(this.SortujWytworniiFilmyCheckedChanged);
             // 
             // SortujRezyserow
             // 
@@ -214,7 +214,7 @@
             this.SortujRezyserow.TabIndex = 158;
             this.SortujRezyserow.Text = "Reżyserów";
             this.SortujRezyserow.UseVisualStyleBackColor = true;
-            this.SortujRezyserow.CheckedChanged += new System.EventHandler(this.SortujRezyserowCheckedChanged);
+            this.SortujRezyserow.CheckedChanged += new System.EventHandler(this.SortujRezyserowFilmyCheckedChanged);
             // 
             // SortujTytuły
             // 
@@ -226,7 +226,7 @@
             this.SortujTytuły.TabIndex = 157;
             this.SortujTytuły.Text = "Tytułów";
             this.SortujTytuły.UseVisualStyleBackColor = true;
-            this.SortujTytuły.CheckedChanged += new System.EventHandler(this.SortujTytułyCheckedChanged);
+            this.SortujTytuły.CheckedChanged += new System.EventHandler(this.SortujTytułyFilmyCheckedChanged);
             // 
             // textBox6
             // 
@@ -346,7 +346,7 @@
             this.SortujCzasTrwania.TabIndex = 165;
             this.SortujCzasTrwania.Text = "Czasu  trwania";
             this.SortujCzasTrwania.UseVisualStyleBackColor = true;
-            this.SortujCzasTrwania.CheckedChanged += new System.EventHandler(this.SortujCzasTrwaniaCheckedChanged);
+            this.SortujCzasTrwania.CheckedChanged += new System.EventHandler(this.SortujCzasTrwaniaFilmyCheckedChanged);
             // 
             // Szukaj
             // 
@@ -357,7 +357,7 @@
             this.Szukaj.TabIndex = 166;
             this.Szukaj.Text = "Szukaj";
             this.Szukaj.UseVisualStyleBackColor = true;
-            this.Szukaj.Click += new System.EventHandler(this.SzukajClick);
+            this.Szukaj.Click += new System.EventHandler(this.SzukajFilmyClick);
             // 
             // Książki
             // 

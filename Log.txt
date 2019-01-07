@@ -1,0 +1,10 @@
+07 Jan 2019 10:38:13,469  UsunClick INFO- Dane usuniêto poprawnie.
+07 Jan 2019 10:38:46,685  DodajClick ERROR- B³¹d!
+System.FormatException: Ci¹g nie zosta³ rozpoznany jako prawid³owy element DateTime.
+   w System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   w System.Convert.ToDateTime(String value)
+   w Katalog.Ksi¹¿ki.DodajClick(Object sender, EventArgs e) w C:\Users\Marcin\documents\visual studio 2017\Projects\Katalog\Katalog\Filmy .cs:wiersz 39
+07 Jan 2019 14:59:50,394  DodajClick INFO- Dane zapisano poprawnie.
+07 Jan 2019 15:00:05,419  UsunClick INFO- Dane usuniêto poprawnie.
+07 Jan 2019 20:35:18,683  DodajMuzykaClick INFO- Dane zapisano poprawnie.
+07 Jan 2019 20:35:25,606  UsunMuzykaClick INFO- Dane usuniêto poprawnie.
