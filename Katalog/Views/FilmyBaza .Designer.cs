@@ -226,7 +226,7 @@
             this.SortujTytuły.TabIndex = 157;
             this.SortujTytuły.Text = "Tytułów";
             this.SortujTytuły.UseVisualStyleBackColor = true;
-            this.SortujTytuły.CheckedChanged += new System.EventHandler(this.SortujTytułyFilmyCheckedChanged);
+            this.SortujTytuły.CheckedChanged += new System.EventHandler(this.SortujTytulyFilmyCheckedChanged);
             // 
             // textBox6
             // 

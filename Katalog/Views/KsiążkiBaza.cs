@@ -28,7 +28,7 @@ namespace Katalog
         {
             try
             {
-                if (Walidacja())
+                if (Waliduj())
                 {
                     bazaKsiążki.Tytuł = textBox1.Text.Trim();
                     bazaKsiążki.Autor = textBox3.Text.Trim();
@@ -156,7 +156,7 @@ namespace Katalog
             this.Close();
         }
 
-        private bool Walidacja()
+        private bool Waliduj()
         {
             if (string.IsNullOrEmpty(textBox1.Text))
             {
@@ -194,7 +194,7 @@ namespace Katalog
             }
         }
 
-        private void SortujTytułyKsiazkiCheckedChanged(object sender, EventArgs e)
+        private void SortujTytulyKsiazkiCheckedChanged(object sender, EventArgs e)
         {
             if (SortujTytuły.Checked)
             {
@@ -213,7 +213,7 @@ namespace Katalog
             }
         }
 
-        private void SortujAutorówKsiazkiCheckedChanged(object sender, EventArgs e)
+        private void SortujAutorowKsiazkiCheckedChanged(object sender, EventArgs e)
         {
             if (SortujAutorów.Checked)
             {
@@ -311,6 +311,7 @@ namespace Katalog
         private void SzukajKsiazkiClick(object sender, EventArgs e)
         {
             IQueryable<BazaKsiążki> baza = modelContext.BazaKsiążki;
+
             if (!string.IsNullOrEmpty(textBox1.Text))
             {
                 baza = baza.Where(y => y.Tytuł == textBox1.Text);

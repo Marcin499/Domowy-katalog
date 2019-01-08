@@ -110,16 +110,16 @@
     <Compile Include="Views\FilmyBaza .Designer.cs">
       <DependentUpon>FilmyBaza .cs</DependentUpon>
     </Compile>
-    <Compile Include="FilmyWypozyczenie.cs">
+    <Compile Include="Views\FilmyWypozyczenie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FilmyWypozyczenie.Designer.cs">
+    <Compile Include="Views\FilmyWypozyczenie.Designer.cs">
       <DependentUpon>FilmyWypozyczenie.cs</DependentUpon>
     </Compile>
-    <Compile Include="KsiazkiWypozyczenie.cs">
+    <Compile Include="Views\KsiazkiWypozyczenie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KsiazkiWypozyczenie.Designer.cs">
+    <Compile Include="Views\KsiazkiWypozyczenie.Designer.cs">
       <DependentUpon>KsiazkiWypozyczenie.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\KsiążkiBaza.cs">
@@ -157,10 +157,10 @@
     <Compile Include="Views\MuzykaBaza.Designer.cs">
       <DependentUpon>MuzykaBaza.cs</DependentUpon>
     </Compile>
-    <Compile Include="MuzykiWypozyczenie.cs">
+    <Compile Include="Views\MuzykiWypozyczenie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MuzykiWypozyczenie.Designer.cs">
+    <Compile Include="Views\MuzykiWypozyczenie.Designer.cs">
       <DependentUpon>MuzykiWypozyczenie.cs</DependentUpon>
     </Compile>
     <Compile Include="Start.cs" />
@@ -171,10 +171,10 @@
     <EmbeddedResource Include="Views\FilmyBaza .resx">
       <DependentUpon>FilmyBaza .cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FilmyWypozyczenie.resx">
+    <EmbeddedResource Include="Views\FilmyWypozyczenie.resx">
       <DependentUpon>FilmyWypozyczenie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KsiazkiWypozyczenie.resx">
+    <EmbeddedResource Include="Views\KsiazkiWypozyczenie.resx">
       <DependentUpon>KsiazkiWypozyczenie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\KsiążkiBaza.resx">
@@ -192,7 +192,7 @@
     <EmbeddedResource Include="Views\MuzykaBaza.resx">
       <DependentUpon>MuzykaBaza.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MuzykiWypozyczenie.resx">
+    <EmbeddedResource Include="Views\MuzykiWypozyczenie.resx">
       <DependentUpon>MuzykiWypozyczenie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

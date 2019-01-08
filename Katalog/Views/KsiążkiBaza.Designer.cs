@@ -200,7 +200,7 @@
             this.SortujAutorów.TabIndex = 178;
             this.SortujAutorów.Text = "Autorów";
             this.SortujAutorów.UseVisualStyleBackColor = true;
-            this.SortujAutorów.CheckedChanged += new System.EventHandler(this.SortujAutorówKsiazkiCheckedChanged);
+            this.SortujAutorów.CheckedChanged += new System.EventHandler(this.SortujAutorowKsiazkiCheckedChanged);
             // 
             // SortujTytuły
             // 
@@ -212,7 +212,7 @@
             this.SortujTytuły.TabIndex = 177;
             this.SortujTytuły.Text = "Tytułów";
             this.SortujTytuły.UseVisualStyleBackColor = true;
-            this.SortujTytuły.CheckedChanged += new System.EventHandler(this.SortujTytułyKsiazkiCheckedChanged);
+            this.SortujTytuły.CheckedChanged += new System.EventHandler(this.SortujTytulyKsiazkiCheckedChanged);
             // 
             // textBox6
             // 

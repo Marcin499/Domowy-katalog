@@ -31,7 +31,7 @@ namespace Katalog
         {
             try
             {
-                if (Walidacja())
+                if (Waliduj())
                 {                    
                     bazaFilmy.Tytuł = textBox1.Text.Trim();
                     bazaFilmy.Reżyseria = textBox3.Text.Trim();
@@ -159,7 +159,7 @@ namespace Katalog
             this.Close();
         }
 
-        private bool Walidacja()
+        private bool Waliduj()
         {
             if (string.IsNullOrEmpty(textBox1.Text))
             {
@@ -197,7 +197,7 @@ namespace Katalog
             }
         }
 
-        private void SortujTytułyFilmyCheckedChanged(object sender, EventArgs e)
+        private void SortujTytulyFilmyCheckedChanged(object sender, EventArgs e)
         {
             if (SortujTytuły.Checked)
             {
@@ -314,6 +314,7 @@ namespace Katalog
         private void SzukajFilmyClick(object sender, EventArgs e)
         {
             IQueryable<BazaFilmy> baza = modelContext.BazaFilmy;
+
             if (!string.IsNullOrEmpty(textBox1.Text))
             {
                 baza = baza.Where(y => y.Tytuł == textBox1.Text);

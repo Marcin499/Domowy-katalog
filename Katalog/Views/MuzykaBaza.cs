@@ -28,7 +28,7 @@ namespace Katalog
         {
             try
             {
-                if (Walidacja())
+                if (Waliduj())
                 {
                     bazaMuzyka.Tytuł = textBox1.Text.Trim();
                     bazaMuzyka.Autor = textBox3.Text.Trim();
@@ -150,7 +150,7 @@ namespace Katalog
             this.Close();
         }
 
-        private bool Walidacja()
+        private bool Waliduj()
         {
             if (string.IsNullOrEmpty(textBox1.Text))
             {
@@ -183,7 +183,7 @@ namespace Katalog
             }
         }
 
-        private void SortujTytułyMuzykaCheckedChanged(object sender, EventArgs e)
+        private void SortujTytulyMuzykaCheckedChanged(object sender, EventArgs e)
         {
             if (SortujTytuły.Checked)
             {
@@ -281,6 +281,7 @@ namespace Katalog
         private void SzukajMuzykaClick(object sender, EventArgs e)
         {
             IQueryable<BazaMuzyka> baza = modelContext.BazaMuzyka;
+
             if (!string.IsNullOrEmpty(textBox1.Text))
             {
                 baza = baza.Where(y => y.Tytuł == textBox1.Text);
@@ -300,8 +301,7 @@ namespace Katalog
             if (!string.IsNullOrEmpty(textBox6.Text))
             {
                 baza = baza.Where(y => y.Gatunek == textBox6.Text);
-            }
-           
+            }            
             dataGridView1.DataSource = baza.ToList();
         }
     }

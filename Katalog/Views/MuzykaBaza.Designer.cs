@@ -179,7 +179,7 @@
             this.SortujTytuły.TabIndex = 177;
             this.SortujTytuły.Text = "Tytułów";
             this.SortujTytuły.UseVisualStyleBackColor = true;
-            this.SortujTytuły.CheckedChanged += new System.EventHandler(this.SortujTytułyMuzykaCheckedChanged);
+            this.SortujTytuły.CheckedChanged += new System.EventHandler(this.SortujTytulyMuzykaCheckedChanged);
             // 
             // textBox6
             // 
