@@ -19,19 +19,8 @@ namespace Katalog
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void PokazHasloCheckedChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
             if (!checkBox1.Checked)
             {
                 textBox5.UseSystemPasswordChar = true;
@@ -42,13 +31,12 @@ namespace Katalog
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ZamknijClick(object sender, EventArgs e)
         {
             this.Close();
-           
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void CzcionkaClick(object sender, EventArgs e)
         {
             FontDialog fd = new FontDialog();
             if (fd.ShowDialog() == DialogResult.OK)
@@ -57,7 +45,7 @@ namespace Katalog
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void PrzegladajClick(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
 
@@ -68,7 +56,7 @@ namespace Katalog
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void WyslijClick(object sender, EventArgs e)
         {
             try
             {

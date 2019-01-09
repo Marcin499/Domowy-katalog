@@ -66,13 +66,13 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(950, 27);
+            this.button1.Location = new System.Drawing.Point(904, 27);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 31);
             this.button1.TabIndex = 0;
             this.toolTip1.SetToolTip(this.button1, "Zamknij");
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.ZamknijClick);
             // 
             // panel1
             // 
@@ -82,7 +82,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1012, 100);
+            this.panel1.Size = new System.Drawing.Size(963, 100);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -104,9 +104,9 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 553);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1012, 101);
+            this.panel2.Size = new System.Drawing.Size(963, 101);
             this.panel2.TabIndex = 2;
-            this.panel2.MouseEnter += new System.EventHandler(this.button2_Click);
+            this.panel2.MouseEnter += new System.EventHandler(this.ZamknijClick);
             // 
             // button19
             // 
@@ -119,7 +119,7 @@
             this.button19.TabIndex = 2;
             this.toolTip1.SetToolTip(this.button19, "Wyślij email");
             this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.button19.Click += new System.EventHandler(this.EmailClick);
             // 
             // button14
             // 
@@ -132,7 +132,7 @@
             this.button14.TabIndex = 1;
             this.toolTip1.SetToolTip(this.button14, "Przejdź do Twitter");
             this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button14.Click += new System.EventHandler(this.TwitterClick);
             // 
             // button18
             // 
@@ -145,7 +145,7 @@
             this.button18.TabIndex = 0;
             this.toolTip1.SetToolTip(this.button18, "Przejdź do Facebook");
             this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.button18.Click += new System.EventHandler(this.FacebookClick);
             // 
             // button2
             // 
@@ -162,8 +162,8 @@
             this.button2.Text = "Książki";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Leave += new System.EventHandler(this.button2_Click);
-            this.button2.MouseEnter += new System.EventHandler(this.button2_Click);
+            this.button2.Leave += new System.EventHandler(this.KsiazkiClick);
+            this.button2.MouseEnter += new System.EventHandler(this.KsiazkiClick);
             // 
             // button3
             // 
@@ -180,7 +180,7 @@
             this.button3.Text = "Filmy";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.MouseEnter += new System.EventHandler(this.button3_Click);
+            this.button3.MouseEnter += new System.EventHandler(this.FilmyClick);
             // 
             // button4
             // 
@@ -197,7 +197,7 @@
             this.button4.Text = "Muzyka";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.MouseEnter += new System.EventHandler(this.button4_Click);
+            this.button4.MouseEnter += new System.EventHandler(this.MuzykaClick);
             // 
             // button5
             // 
@@ -212,7 +212,7 @@
             this.button5.Text = "Baza książek";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Visible = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.KsiazkiBazaClick);
             // 
             // button6
             // 
@@ -227,7 +227,7 @@
             this.button6.Text = "Baza filmów";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Visible = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.FilmyBazaClick);
             // 
             // button7
             // 
@@ -242,7 +242,7 @@
             this.button7.Text = "Baza płyt";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Visible = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.MuzykaBazaClick);
             // 
             // button8
             // 
@@ -257,7 +257,7 @@
             this.button8.Text = "Wypożyczalnia";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Visible = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.Click += new System.EventHandler(this.KsiazkiWypozyczeniaClick);
             // 
             // button9
             // 
@@ -272,7 +272,7 @@
             this.button9.Text = "Wypozyczalnia";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Visible = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.Click += new System.EventHandler(this.FilmyWypozyczeniaClick);
             // 
             // button10
             // 
@@ -287,7 +287,7 @@
             this.button10.Text = "Wypożyczalnia";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Visible = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button10.Click += new System.EventHandler(this.MuzykaWypozyczeniaClick);
             // 
             // button11
             // 
@@ -302,7 +302,7 @@
             this.button11.Text = "Nowości wydawnicze";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Visible = false;
-            this.button11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button11_click);
+            this.button11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.WiecejKsiazekclick);
             // 
             // button12
             // 
@@ -317,7 +317,7 @@
             this.button12.Text = "Nowości filmowe";
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Visible = false;
-            this.button12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button12_Click);
+            this.button12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.WiecejFilmowClick);
             // 
             // button13
             // 
@@ -332,7 +332,7 @@
             this.button13.Text = "Nowości muzyczne";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Visible = false;
-            this.button13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button13_Click);
+            this.button13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.WiecejMuzykiClick);
             // 
             // label2
             // 
@@ -379,7 +379,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkKhaki;
-            this.ClientSize = new System.Drawing.Size(1012, 654);
+            this.ClientSize = new System.Drawing.Size(963, 654);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -403,7 +403,6 @@
             this.Name = "MenuWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Domowy katalog";
-            this.Load += new System.EventHandler(this.Menu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -84,7 +84,7 @@
             this.button1.TabIndex = 0;
             this.toolTip1.SetToolTip(this.button1, "Zamknij");
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.ZamknijClick);
             // 
            
             // label3
@@ -96,7 +96,6 @@
             this.label3.Size = new System.Drawing.Size(60, 21);
             this.label3.TabIndex = 4;
             this.label3.Text = "Temat:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox2
             // 
@@ -104,8 +103,7 @@
             this.textBox2.Location = new System.Drawing.Point(212, 177);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(415, 26);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.TabIndex = 3;            
             // 
             // label4
             // 
@@ -192,7 +190,7 @@
             this.button2.TabIndex = 11;
             this.toolTip1.SetToolTip(this.button2, "Wyslij");
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.WyslijClick);
             // 
             // checkBox1
             // 
@@ -203,7 +201,7 @@
             this.checkBox1.TabIndex = 12;
             this.checkBox1.Text = "Pokaż hasło";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.PokazHasloCheckedChanged);
             // 
             // button3
             // 
@@ -216,7 +214,7 @@
             this.button3.TabIndex = 13;
             this.toolTip1.SetToolTip(this.button3, "Edytuj czcionkę");
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.CzcionkaClick);
             // 
             // button4
             // 
@@ -229,7 +227,7 @@
             this.button4.TabIndex = 14;
             this.toolTip1.SetToolTip(this.button4, "Dodaj plik");
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.PrzegladajClick);
             // 
             // textBox6
             // 

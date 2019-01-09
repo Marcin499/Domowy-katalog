@@ -15,13 +15,13 @@ using log4net;
 
 namespace Katalog
 {
-    public partial class Książki : Form
+    public partial class FilmyBaza : Form
     {
         ModelContext modelContext = new ModelContext();
         BazaFilmy bazaFilmy = new BazaFilmy();
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        public Książki()
+        public FilmyBaza()
         {
             InitializeComponent();
             Wyswietl();
@@ -192,7 +192,7 @@ namespace Katalog
                 return false;
             }
             else
-            {                
+            {
                 return true;
             }
         }
@@ -210,8 +210,8 @@ namespace Katalog
             else
             {
                 var dane =
-               from a in modelContext.BazaFilmy
-               select a;
+                     from a in modelContext.BazaFilmy
+                     select a;
                 dataGridView1.DataSource = dane.ToList();
             }
         }
@@ -229,8 +229,8 @@ namespace Katalog
             else
             {
                 var dane =
-               from a in modelContext.BazaFilmy
-               select a;
+                    from a in modelContext.BazaFilmy
+                     select a;
                 dataGridView1.DataSource = dane.ToList();
             }
         }
@@ -248,8 +248,8 @@ namespace Katalog
             else
             {
                 var dane =
-               from a in modelContext.BazaFilmy
-               select a;
+                     from a in modelContext.BazaFilmy
+                    select a;
                 dataGridView1.DataSource = dane.ToList();
             }
         }
@@ -267,8 +267,8 @@ namespace Katalog
             else
             {
                 var dane =
-               from a in modelContext.BazaFilmy
-               select a;
+                    from a in modelContext.BazaFilmy
+                     select a;
                 dataGridView1.DataSource = dane.ToList();
             }
         }
@@ -286,8 +286,8 @@ namespace Katalog
             else
             {
                 var dane =
-               from a in modelContext.BazaFilmy
-               select a;
+                     from a in modelContext.BazaFilmy
+                     select a;
                 dataGridView1.DataSource = dane.ToList();
             }
         }

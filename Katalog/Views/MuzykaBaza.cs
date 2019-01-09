@@ -196,8 +196,8 @@ namespace Katalog
             else
             {
                 var dane =
-               from a in modelContext.BazaMuzyka
-               select a;
+                    from a in modelContext.BazaMuzyka
+                    select a;
                 dataGridView1.DataSource = dane.ToList();
             }
         }
@@ -215,8 +215,8 @@ namespace Katalog
             else
             {
                 var dane =
-               from a in modelContext.BazaMuzyka
-               select a;
+                    from a in modelContext.BazaMuzyka
+                    select a;
                 dataGridView1.DataSource = dane.ToList();
             }
         }
@@ -234,8 +234,8 @@ namespace Katalog
             else
             {
                 var dane =
-               from a in modelContext.BazaMuzyka
-               select a;
+                    from a in modelContext.BazaMuzyka
+                    select a;
                 dataGridView1.DataSource = dane.ToList();
             }
         }
@@ -253,8 +253,8 @@ namespace Katalog
             else
             {
                 var dane =
-               from a in modelContext.BazaMuzyka
-               select a;
+                    from a in modelContext.BazaMuzyka
+                    select a;
                 dataGridView1.DataSource = dane.ToList();
             }
         }
@@ -272,8 +272,8 @@ namespace Katalog
             else
             {
                 var dane =
-               from a in modelContext.BazaMuzyka
-               select a;
+                    from a in modelContext.BazaMuzyka
+                    select a;
                 dataGridView1.DataSource = dane.ToList();
             }
         }

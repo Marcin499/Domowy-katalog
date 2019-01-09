@@ -98,11 +98,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="email.cs">
+    <Compile Include="Views\email.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="email.Designer.cs">
+    <Compile Include="Views\email.Designer.cs">
       <DependentUpon>email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901081625055_trzy.cs" />
+    <Compile Include="Migrations\201901081625055_trzy.Designer.cs">
+      <DependentUpon>201901081625055_trzy.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FilmyBaza .cs">
       <SubType>Form</SubType>
@@ -129,10 +133,10 @@
       <DependentUpon>KsiążkiBaza.cs</DependentUpon>
     </Compile>
     <Compile Include="LogHelper.cs" />
-    <Compile Include="MenuWindow.cs">
+    <Compile Include="Views\MenuWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuWindow.Designer.cs">
+    <Compile Include="Views\MenuWindow.Designer.cs">
       <DependentUpon>MenuWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201901041519256_jeden.cs" />
@@ -165,8 +169,11 @@
     </Compile>
     <Compile Include="Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="email.resx">
+    <EmbeddedResource Include="Views\email.resx">
       <DependentUpon>email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901081625055_trzy.resx">
+      <DependentUpon>201901081625055_trzy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FilmyBaza .resx">
       <DependentUpon>FilmyBaza .cs</DependentUpon>
@@ -180,7 +187,7 @@
     <EmbeddedResource Include="Views\KsiążkiBaza.resx">
       <DependentUpon>KsiążkiBaza.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuWindow.resx">
+    <EmbeddedResource Include="Views\MenuWindow.resx">
       <DependentUpon>MenuWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901041519256_jeden.resx">

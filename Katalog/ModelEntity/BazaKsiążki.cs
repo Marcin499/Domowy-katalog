@@ -9,7 +9,7 @@ namespace Katalog.ModelEntity
 {
    public class BazaKsiążki
     {
-        public int Id { get; set; }
+        public Int64 Id { get; set; }
 
         public string Tytuł { get; set; }
 
